@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><title>Regestration Form</title>
+
+<script>
+function zoomvalidate()
+{
+var a=document.form.username.value
+if(a == "" || a.length < 3 || a.length > 15 )
+{
+alert("Unvalid Username !")
+document.form.username.focus()
+return false
+}
+var b=document.form.pass1.value
+var c=document.form.pass2.value
+if(b == "")
+{
+alert("Please Enter Password..!")
+document.form.pass1.focus()
+return false
+}
+if(b != c)
+{
+alert("Password Doesn't Match..!")
+document.form.pass2.focus()
+return false
+}
+if(document.form.gender[0].checked==false && document.form.gender[1].checked==false)
+{
+alert("Please Select Gender..!")
+document.form.gender[0].focus()
+return false
+}
+if(document.form.hobby[0].checked==false && document.form.hobby[1].checked==false && document.form.hobby[2].checked==false)
+{
+alert("Please Select Hobby...!")
+document.form.hobby[0].focus()
+return false
+}
+var d=document.form.address.value
+if(d == "" )
+{
+alert("Please Enter Address...!")
+document.form.address.focus()
+return false
+}
+if(document.form.city.value==-1)
+{
+alert("Please Select City..!")
+document.form.city.focus()
+return false
+}
+var e=document.form.pincode.value
+if(e == "" || e.length!=6 || isNaN(e))
+{
+alert("Unvalid Pincode...!")
+document.form.pincode.focus()
+return false
+}
+}
+</script>
+</head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);" alink="#000099" link="#000099" vlink="#990099">
+<form onsubmit="return zoomvalidate()" method="get" action="zoom.html" name="form"><br>
+<h1 style="text-align: center;">Regestration Form
+</h1>
+<table style="width: 40%; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2">
+<tbody>
+<tr>
+<td>Username</td>
+<td><input name="username"></td>
+</tr>
+<tr>
+<td>Password</td>
+<td><input name="pass1" type="password"></td>
+</tr>
+<tr>
+<td>Re-Type Password</td>
+<td><input name="pass2" type="password"></td>
+</tr>
+<tr>
+<td>Gender</td>
+<td><input name="gender" value="male" type="radio">Male <input name="gender" value="Female" type="radio">Female</td>
+</tr>
+<tr>
+<td>Hobby</td>
+<td><input name="hobby" type="checkbox">Dancing
+<input name="hobby" type="checkbox">Singing
+<input name="hobby" type="checkbox">Reading</td>
+</tr>
+<tr>
+<td>Address</td>
+<td><textarea cols="30" rows="4" name="address"></textarea></td>
+</tr>
+<tr>
+<td>City</td>
+<td>
+<select name="city"><option value="-1">--selsect city--</option><option>Ahmedabad</option><option>Surat</option><option>Vadodara</option><option>Bharuch</option></select>
+</td>
+</tr>
+<tr>
+<td>Pincode</td>
+<td><input name="pincode"></td>
+</tr>
+<tr>
+<td></td>
+<td><input name="submit" value="send" type="submit"><input value="cancle" name="reset" type="reset"></td>
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</form>
+</body></html>
